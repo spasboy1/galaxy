@@ -7,7 +7,9 @@ import { AiOutlineGithub } from 'solid-icons/ai';
 
 function Nav() {
   function gamesGo() {
-    window.navigate("https://radon.games/games")
+    window.navigate("https://radon.games/games") }
+  function googleGo() {
+    window.navigate("https://google.com")  
   }
 
   return (
@@ -17,12 +19,12 @@ function Nav() {
             <Logo />
         </A>
         <div class="navItems">
-            <a href="https://google.com" class="navItem">
+            <div onclick={googleGo} class="navItem">
                 <SiDiscord fill="var(--text-inverse)" />
-            </a>
-            <a href="https://google.com" class="navItem">
+            </div>
+            <div onclick={googleGo} class="navItem">
                 <AiOutlineGithub fill="var(--text-inverse)" />
-            </a>
+            </div>
             <div onclick={gamesGo} class="navItem">
                 <IoGameController fill="var(--text-inverse)" />
             </div>
